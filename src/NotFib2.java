@@ -20,7 +20,7 @@ public class NotFib2 {
         if(n>1)
         {
 
-            sq[1] = 1;
+            sq[1] = 2;
         }
         for(int i = 2; i < n; i++)
         {
