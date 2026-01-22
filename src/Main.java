@@ -23,7 +23,7 @@ public class Main {
         return table[a][b];
     }
 
-    public static String longestCommonSubstring(String fText, String sText){
+    public String longestCommonSubstring(String fText, String sText){
 
         int a = fText.length();
         int b = sText.length();
@@ -53,6 +53,29 @@ public class Main {
                 return "";
             }
         }  return fText.substring(endIndex - maxLength, endIndex);
+    }
+
+    public static void main(String[] args){
+
+        String text1 = "abcde";
+        String text2 = "abc";
+
+        Main main = new Main();
+
+        int lcsLength = main.longestCommonSubsequence(text1,text2);
+
+        String lcsubs = main.longestCommonSubstring(text1, text2);
+
+        System.out.println("Input Strings: " + text1 + " , "+ text2);
+
+        System.out.println();
+
+        System.out.println("Outputs:");
+
+        System.out.println("Longest Common Subsequence Length: " + lcsLength);
+
+        System.out.println("Longest Common Substring: " + lcsubs);
+
     }
 
 }
